@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+
+
+}
+
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation group: 'org.openpnp', name: 'opencv', version: '4.5.1-2'
+    implementation group: 'nu.pattern', name: 'opencv', version: '2.4.9-7'
+    implementation 'com.github.t9t.minecraft-rcon-client:minecraft-rcon-client:1.0.0'
+
+}
+
+test {
+    useJUnitPlatform()
+}
